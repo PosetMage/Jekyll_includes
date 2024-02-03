@@ -2,35 +2,43 @@
 <style>
   .page-container {
     display: flex;
-    width: 100%;
+    flex-wrap: wrap; /* Allow items to wrap as needed */
+    word-wrap: break-word;
   }
 
   .sidebar {
-    flex: 0 0 14em; /* Fixed width for the sidebar */
-    padding: 1em;
-    overflow: auto;
-    height: 100vh;
+    position: fixed;
+    flex: 0 0 13em; /* Fixed width for the sidebar */
+    width: 150px; /* Reduced from 200px */
+  }
+
+  .sidebar p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2em;
   }
 
   .page-content {
+    margin-left: 200px; /* Reduced from 210px */
+    margin-right: 200px;
     flex-grow: 1; /* Consumes the rest of the space */
-    overflow: auto; /* Enables scrolling if content overflows */
-    word-wrap: break-word; /* Wrap long words */
-    max-width: 100%; /* The width of the sidebar plus its padding */
+    max-width: calc(100% - 150px);
   }
 
+
+  </style>
+</head>
 
 </style>  
 
 <div class="page-container">
-  <aside class="sidebar" id="outline">
+  <aside class="sidebar" id="toc">
     <!-- Sidebar content will be loaded here -->
   </aside>
 
   <main class="page-content">
     <article class="post">
       {% seo %}
-      <h1 class="post-title">{{ page.title }}</h1>
       <div class="post-content">
         {{ content }}
       </div>
