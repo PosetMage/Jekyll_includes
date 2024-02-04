@@ -5,9 +5,7 @@
 
     <div class="footer-col-wrapper">
       <div class="footer-col">
-        <input type="text" id="searchQuery" placeholder="Enter search keywords" />
-        <button onclick="SearchSite()">Search with Google</button>
-
+        <p>国士無双 一騎当千</p>
       {%- if site.author %}
         <ul class="contact-list">
           {% if site.author.name -%}
@@ -20,8 +18,11 @@
       {%- endif %}
       </div>
       <div class="footer-col">
-        <p>{{ site.description | escape }}</p>
+        <input type="text" id="searchQuery" placeholder="Enter search keywords" />
+        <button onclick="SearchSite()">Search with Google</button>
       </div>
+
+
     </div>
 
     <div class="social-links">
