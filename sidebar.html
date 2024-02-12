@@ -15,17 +15,15 @@
     /* Base styles for smaller screens */
     @media (max-width: 767px) {
       .sidebar {
-          position: fixed;
-          left: 0;
-          width: 90px; /* Reduced width for smaller screens */
+        display: none; /* Hide the sidebar on smaller screens */
       }
 
       .page-content {
         flex-grow: 1; /* Consumes the rest of the space */  
-        margin-left: 80px; /* Make room for the sidebar */
-        margin-right: 100px; /* Make room for the sidebar */
+        margin-left: 20px; /* Make room for the sidebar */
+        margin-right: 20px; /* Make room for the sidebar */
           
-        width: calc(100% - 100px); /* Use remaining viewport width */
+        width: auto; /* Use remaining viewport width */
       }
     }
 
