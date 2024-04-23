@@ -1,6 +1,6 @@
 git config --local user.name "LatticeMage"
 git config --local user.email "LatticeMage@gmail.com"
-git remote set-url origin git@LM:LatticeMage/Jekyll_includes.git
+git remote set-url origin git@LM:PosetMage/Jekyll_includes.git
 
 git pull
 git add .
