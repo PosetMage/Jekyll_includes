@@ -10,7 +10,7 @@ for /r %%i in (*.png *.jpg) do (
     REM Generating output filename with .webp extension
     set "output_filename=!dirpath!!filename!.webp"
     REM Converting .png or .jpg to .webp using ffmpeg
-    ffmpeg -i "%%i" -pix_fmt yuv420p "!output_filename!"
+    ffmpeg -i "%%i" "!output_filename!"
 )
 
 endlocal
