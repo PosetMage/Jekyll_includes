@@ -2,7 +2,6 @@
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="wrapper">
-
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p>{{ slogan }}</p>
@@ -21,13 +20,22 @@
         <input type="text" id="searchQuery" placeholder="Enter search keywords" />
         <button onclick="SearchSite()">Search with Google</button>
       </div>
-
-
     </div>
 
-    <div class="social-links">
-      {%- include social.html -%}
-    </div>
+    <head>  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </head>
+
+    <style>
+        /* Adjust the font size for larger icons */
+        .social-media-list i {
+            font-size: 32px; /* You can adjust the value as needed */
+        }
+
+        a + a {
+            margin-left: 32px; /* You can adjust the value as needed */
+        }
+    </style>
 
   </div>
 
